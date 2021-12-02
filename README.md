@@ -79,4 +79,4 @@ root.onclick = function () {
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm testsdfsf
+npm testsdfsfsdfsadf
