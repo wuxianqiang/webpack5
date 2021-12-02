@@ -12,9 +12,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
   "husky": {
     "hooks": {
       "pre-push": "sh ./pre-push.sh"
