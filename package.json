@@ -12,16 +12,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "husky": {
-    "hooks": {
-      "pre-push": "sh ./pre-push.sh"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts,mpx}": [
-      "npm run lint -- --fix"
-    ]
-  },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-react": "^7.13.13",
