@@ -74,3 +74,9 @@ root.onclick = function () {
   let res = __webpack_require__.e(/*! import() */ "src_title_js").then(__webpack_require__.bind(__webpack_require__, /*! ./title */ "./src/title.js"))
   console.log(res)
 }
+
+
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npm test
