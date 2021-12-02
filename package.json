@@ -6,7 +6,8 @@
   "scripts": {
     "webpck": "npx webpack",
     "start": "snowpack dev",
-    "build": "webpack"
+    "build": "webpack",
+    "prepare": "husky install"
   },
   "sideEffects": false,
   "keywords": [],
@@ -44,7 +45,7 @@
     "@babel/plugin-transform-runtime": "^7.12.15",
     "@babel/preset-env": "^7.12.13",
     "@snowpack/plugin-vue": "^2.3.0",
-    "husky": "^7.0.4",
+    "husky": "^7.0.0",
     "snowpack": "^3.0.11",
     "webpack-bundle-analyzer": "^4.5.0",
     "webpack-plugin-replace": "^1.2.0"
