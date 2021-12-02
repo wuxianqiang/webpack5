@@ -12,10 +12,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "husky": {
-    "hooks": {
-      "pre-push": "sh ./pre-push.sh"
-    }
+  "gitHooks": {
+    "pre-push": "sh ./pre-push.sh"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
