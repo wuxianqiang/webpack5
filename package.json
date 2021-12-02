@@ -15,8 +15,15 @@
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "sh ./pre-push.sh"
+    }
+  },
   "lint-staged": {
-    "push": "sh ./pre-push.sh"
+    "*.{js,ts,mpx}": [
+      "npm run lint -- --fix"
+    ]
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
