@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo 1111
 currentBranch=`git rev-parse --abbrev-ref HEAD`
 targetBranch='master'
 
