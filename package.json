@@ -12,11 +12,18 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-push": "sh ./pre-push.sh"
+    }
+  },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-react": "^7.13.13",
     "@babel/runtime": "^7.12.13",
     "@babel/runtime-corejs3": "^7.12.13",
+    "@didi/mpx-ui": "^2.1.5",
+    "@mpxjs/core": "^2.6.103",
     "babel-loader": "^8.2.2",
     "buffer": "^6.0.3",
     "core-js": "^3.8.3",
@@ -30,6 +37,7 @@
     "react-dom": "^17.0.2",
     "stream-browserify": "^3.0.0",
     "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.2.4",
     "url-loader": "^4.1.1",
     "webpack": "^5.37.1",
     "webpack-cli": "^4.7.0",
@@ -41,6 +49,8 @@
     "@babel/plugin-transform-runtime": "^7.12.15",
     "@babel/preset-env": "^7.12.13",
     "@snowpack/plugin-vue": "^2.3.0",
-    "snowpack": "^3.0.11"
+    "snowpack": "^3.0.11",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-plugin-replace": "^1.2.0"
   }
 }

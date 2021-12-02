@@ -63,3 +63,14 @@ module.exports = {
   },
 };
 ```
+
+
+let root = document.getElementById('root')
+// __webpack_require__.e(/*! import() */ "src_title_js") 就是动态加载src_title_js代码块
+// 通过JSONP加载src_title_js.bundle.js得到对应的代码
+// 然后吧代码块合并到当前文件的modules里面
+// 然后通过require加载./src/title.js得到返回值
+root.onclick = function () {
+  let res = __webpack_require__.e(/*! import() */ "src_title_js").then(__webpack_require__.bind(__webpack_require__, /*! ./title */ "./src/title.js"))
+  console.log(res)
+}

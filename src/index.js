@@ -1,3 +1,5 @@
-import './index.css'
-
-console.log('hello world')
+let root = document.getElementById('root')
+root.onclick = function () {
+  let res = import('./title')
+  console.log(res)
+}

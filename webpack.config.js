@@ -1,5 +1,11 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+// const CustomPlugin = require("./plugins/CustomPlugin")
+// const ReplacePlugin = require('webpack-plugin-replace');
+const TerserJSPlugin = require("terser-webpack-plugin");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
+
 module.exports = {
   mode: "development",
   entry: "./src/index.js",
@@ -11,32 +17,20 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
-  optimization: {
-    usedExports: true,
-  },
+  // optimization: {
+  //   minimizer: [
+  //     new TerserJSPlugin({
+  //       terserOptions: {
+  //         format: {
+  //           comments: /(\s*#if)|(\s*#end)/i,
+  //         },
+  //       },
+  //     }),
+  //   ],
+  // },
   devtool: false,
   module: {
     rules: [
-      {
-        test: /\.js$/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              presets: ["@babel/preset-react"],
-            },
-          },
-        ],
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.png$/,
-        type: 'asset/resource'
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      }
     ],
   },
   devServer: {},
@@ -44,5 +38,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
+    // new BundleAnalyzerPlugin({
+    //   analyzerMode: 'json'
+    // })
   ],
 };
